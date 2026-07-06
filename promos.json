@@ -1,0 +1,40 @@
+{
+  "promos": [
+    {
+      "id": "repulsif-moustiques",
+      "statut": "actif",
+      "hero": true,
+      "image": "post1_moustique_final_style_ref.png",
+      "titre": "Répulsif moustiques",
+      "description": "Spray aux huiles essentielles.",
+      "prix": "21 DT",
+      "lien": "boutique.html",
+      "alt": "Spray répulsif moustiques Nature Touch — pack de 3 sprays à 21 DT"
+    },
+    {
+      "id": "pack-ete",
+      "statut": "actif",
+      "hero": true,
+      "image": "post8_pack_promo_final.png",
+      "titre": "Pack Promo Été",
+      "description": "1 spray répulsif anti-moustiques + 1 savon spray au choix.",
+      "prix": "12 DT",
+      "lien": "boutique.html",
+      "alt": "Pack Promo Été : spray répulsif anti-moustiques + savon spray au choix — 12 DT"
+    },
+    {
+      "id": "pack-hygiene",
+      "statut": "bientot",
+      "hero": false,
+      "titre": "Pack Hygiène Famille",
+      "description": "Prochaine offre groupée. Disponible très bientôt."
+    },
+    {
+      "id": "pack-rentree",
+      "statut": "bientot",
+      "hero": false,
+      "titre": "Pack Rentrée",
+      "description": "Nouvelle promo en préparation. Restez connecté."
+    }
+  ]
+}
