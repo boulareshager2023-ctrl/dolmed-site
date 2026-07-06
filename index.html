@@ -257,12 +257,6 @@ footer.site a:hover{color:#fff}
       <div class="txt"><h3>Protection &amp; santé</h3><p>Oxymètres, concentrateurs, masques.</p><span class="lien">Découvrir →</span></div>
     </a>
   </div>
-    </a>
-    <a class="gamme g4" href="boutique.html">
-      <div class="ph">[Photo : lingettes désinfectantes, cuisine]</div>
-      <div class="txt"><h3>Hygiène</h3><p>Désinfectantes mains &amp; surfaces.</p><span class="lien">Découvrir →</span></div>
-    </a>
-  </div>
 </section>
 
 <!-- ======== FIDÉLITÉ ======== -->
@@ -270,23 +264,19 @@ footer.site a:hover{color:#fff}
   <div class="wrap">
     <h2>Votre compte vous rapporte</h2>
     <p><b>-15 % immédiat</b> sur votre première commande, et des <b>points cadeaux</b> à chaque achat, à échanger contre des avantages exclusifs.</p>
-    <a class="btn btn-primary" href="/compte/creer">Créer mon compte gratuit</a>
+    <a class="btn btn-primary" href="compte.html">Créer mon compte gratuit</a>
   </div>
 </section>
 
 <!-- ======== AVIS — contenu réel à collecter, ne rien publier de fictif ======== -->
-<section class="avis">
+<section class="avis" id="avis">
   <div class="wrap" style="display:block">
     <div class="section-title">
       <h2>Ils nous font confiance</h2>
       <p>Avis vérifiés de clients livrés. Section masquée tant que 3 avis réels ne sont pas collectés.</p>
     </div>
   </div>
-  <div class="wrap">
-    <blockquote class="placeholder">[AVIS CLIENT n°1 — à collecter : e-mail post-livraison + points bonus]<footer>[Prénom, ville]</footer></blockquote>
-    <blockquote class="placeholder">[AVIS CLIENT n°2 — à collecter]<footer>[Prénom, ville]</footer></blockquote>
-    <blockquote class="placeholder">[AVIS CLIENT n°3 — à collecter]<footer>[Prénom, ville]</footer></blockquote>
-  </div>
+  <div class="wrap" id="avis-grid"></div>
 </section>
 
 <!-- ======== CTA FINAL ======== -->
@@ -352,6 +342,17 @@ footer.site a:hover{color:#fff}
     if(s.length<2){prev.style.display='none';next.style.display='none';}
     reset();
   }
+})();
+</script>
+<script>
+(function(){
+  var sec=document.getElementById('avis');if(!sec)return;
+  var grid=document.getElementById('avis-grid');
+  fetch('avis.json').then(function(r){return r.json();}).then(function(d){
+    var l=(d.avis||[]);
+    if(!l.length){sec.style.display='none';return;}
+    grid.innerHTML=l.map(function(a){return '<blockquote>'+(a.texte||'')+'<footer>'+((a.prenom||'')+(a.ville?', '+a.ville:''))+'</footer></blockquote>';}).join('');
+  }).catch(function(){sec.style.display='none';});
 })();
 </script>
 </body>
