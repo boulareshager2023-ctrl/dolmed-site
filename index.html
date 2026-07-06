@@ -374,7 +374,7 @@ footer.site a:hover{color:#fff}
   var grid=document.getElementById('avis-grid');
   fetch('avis.json').then(function(r){return r.json();}).then(function(d){
     var l=(d.avis||[]);
-    if(!l.length){sec.style.display='none';return;}
+    if(!l.length){var t=sec.querySelector('.section-title');if(t)t.style.display='none';return;}
     grid.innerHTML=l.map(function(a){return '<blockquote>'+(a.texte||'')+'<footer>'+((a.prenom||'')+(a.ville?', '+a.ville:''))+'</footer></blockquote>';}).join('');
   }).catch(function(){sec.style.display='none';});
 })();
