@@ -49,8 +49,8 @@ exports.handler = async (event) => {
 
         <!-- En-tête crème + logo -->
         <tr>
-          <td align="center" style="background:linear-gradient(180deg,#f7f2ea,#efe7db);padding:30px 24px 22px;">
-            <img src="${LOGO}" alt="DolmeD distribution" width="200" style="display:block;width:200px;max-width:60%;height:auto;margin:0 auto 6px;">
+          <td align="center" style="background:#f7f2ea;padding:38px 24px 30px;">
+            <img src="${LOGO}" alt="DolmeD distribution" width="230" style="display:block;width:230px;max-width:66%;height:auto;margin:0 auto;">
           </td>
         </tr>
 
