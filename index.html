@@ -346,12 +346,18 @@ footer.site a:hover{color:#fff}
   var root=document.querySelector('.hero-carousel');if(!root)return;
   var track=root.querySelector('.hc-track'),dw=root.querySelector('.hc-dots');
   var prev=root.querySelector('.hc-prev'),next=root.querySelector('.hc-next');
-  fetch('promos.json').then(function(r){return r.json();}).then(function(d){
-    var h=(d.promos||[]).filter(function(p){return p.hero&&p.statut!=='bientot'&&p.image;});
-    if(!h.length){root.style.display='none';return;}
-    track.innerHTML=h.map(function(p,n){return '<div class="hc-slide'+(n===0?' is-active':'')+'"><img src="'+p.image+'" alt="'+(p.alt||p.titre||'')+'"></div>';}).join('');
-    init();
-  }).catch(init);
+  var G=[
+    {img:'gamme-lingettes.png',alt:'Lingettes DolmeG'},
+    {img:'gamme-savons.png',alt:'Savons sprays DolmeG'},
+    {img:'gamme-repulsif.png',alt:'Spray répulsif moustiques DolmeG'},
+    {img:'gamme-mains.png',alt:'Solutions hydroalcooliques mains'},
+    {img:'gamme-surfaces.png',alt:'Désinfectants surfaces et air'},
+    {img:'gamme-acariens.png',alt:'Sprays anti-acariens'}
+    {img:'gamme-protection.png',alt:'Protection & santé'},
+    {img:'gamme-toilettes.png',alt:'Hygiène toilettes'}
+  ];
+  track.innerHTML=G.map(function(p,n){return '<div class="hc-slide'+(n===0?' is-active':'')+'"><img src="'+p.img+'" alt="'+p.alt+'"></div>';}).join('');
+  init();
   function init(){
     var s=[].slice.call(track.querySelectorAll('.hc-slide'));if(!s.length)return;
     dw.innerHTML='';var i=0,t,delay=5000;
