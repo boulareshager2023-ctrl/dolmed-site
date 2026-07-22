@@ -7,7 +7,7 @@
 
 /* Règles commerciales — un seul endroit à modifier */
 const REGLES = {
-  livraison: 5,          // frais de livraison en DT
+  livraison: 8,          // frais de livraison en DT
   seuilGratuite: 200,    // livraison gratuite à partir de ce montant (DT)
   remisePct: 15,         // remise première commande (%)
   codePromo: "BIENVENUE15",
@@ -21,7 +21,7 @@ const PRODUITS = [
  {sku:"LIN-CLEANIC-100",   nom:"Lingettes désinfectantes Cleanic",       senteur:"Antibactériennes",             format:"Boîte de 100", prix:28.000,   promo:null, stock:true,  fam:"lingettes", img:"p03", phare:true},
  {sku:"LIN-BEBE-100",      nom:"Lingettes pour bébés",                   senteur:"PH neutre — hypoallergéniques",format:"Boîte de 100", prix:21.000,   promo:null, stock:true,  fam:"lingettes", img:"p04", phare:true},
  {sku:"LIN-DOUCHESEC-100", nom:"Lingettes Douche-à-sec",                 senteur:"Usage externe — sans rinçage", format:"Boîte de 100", prix:28.000,   promo:null, stock:true,  fam:"lingettes", img:"p05", phare:true},
- {sku:"REP-CITRO-100",     nom:"Répulsif Moustique en Spray",            senteur:"Citronnelle — huiles essentielles", format:"100 ml", prix:9.000, promo:null, stock:true,  fam:"repulsif",  img:"p08"},
+ {sku:"REP-CITRO-100",     nom:"Répulsif Moustique en Spray",            senteur:"Citronnelle — huiles essentielles", format:"100 ml", prix:9.000, promo:null, stock:true,  fam:"repulsif",  img:"p08", fiche:"produit-repulsif.html"},
  {sku:"ACA-JASBL-100",     nom:"Spray Anti-Acariens",                    senteur:"Jasmin Blanc",                 format:"100 ml",       prix:15.000,   promo:null, stock:true,  fam:"acariens",  img:"p09"},
  {sku:"ACA-JASBL-500",     nom:"Spray Anti-Acariens",                    senteur:"Jasmin Blanc",                 format:"500 ml",       prix:45.000,   promo:null, stock:true,  fam:"acariens",  img:"p10"},
  {sku:"ACA-FLO-100",       nom:"Spray Anti-Acariens",                    senteur:"Fleur d'Oranger",              format:"100 ml",       prix:15.000,   promo:null, stock:true,  fam:"acariens",  img:"p11"},

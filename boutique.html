@@ -162,7 +162,7 @@ function carte(p){
     : '<button class="btn add off" type="button" disabled>Me prévenir du retour</button>';
   return `<article class="card${p.phare?' vedette':''}" data-fam="${p.fam}">
     <div class="ph">${ribbon}${promoBadge}<img src="${IMAGES[p.img]}" alt="${p.nom} ${p.senteur} ${p.format}" loading="lazy" class="zoomable" tabindex="0"><span class="fmt">${p.format}</span></div>
-    <div class="tx">${st}<h3>${p.nom}</h3><p class="sc">${p.senteur}</p>
+    <div class="tx">${st}<h3>${p.fiche?`<a href="${p.fiche}" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(51,108,168,.3)">${p.nom}</a>`:p.nom}</h3><p class="sc">${p.senteur}</p>
       <div class="row"><span class="prwrap">${prixHtml}</span><span class="pts">${pts}</span></div>${btn}</div>
   </article>`;
 }
